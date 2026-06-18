@@ -184,7 +184,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-    res.send("");
+    res.send("/home");
 });
 
 app.get("/home", (req, res) => {
