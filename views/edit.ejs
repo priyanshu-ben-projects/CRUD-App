@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/edit.css">
+    <title>Edit Form</title>
+</head>
+<body>
+    <a href="/home" class="backbtn"><button>Home</button></a>
+    <form action="/home/<%=fruit.id%>?_method=PATCH" method="post">
+        <h5 class="showID">Item ID: <%= fruit.id %></h5>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="<%= fruit.name %>" id="name">
+        </div>
+    
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" name="price" value="<%= fruit.price %>" id="price">
+        </div>
+    
+        <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="text" name="color" value="<%= fruit.color %>" id="color">
+        </div>
+    
+        <label class="stock" for="inStock">
+            <p>Stock Available :</p><input name="inStock"  type="checkbox" id="inStock">
+        </label>
+        <button type="submit" class="submit-btn">Update Data</button>
+    </form>
+</body>
+</html>

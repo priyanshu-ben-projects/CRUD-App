@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/showMore.css">
+    <title>ShowSingleFruit</title>
+</head>
+<body>
+    <a href="/home" class="backbtn"><button>Home</button></a>
+    <div class="wrapper">   
+        <div class="item">
+                <div class="details">
+                    <h2>
+                        <%= fruit.name %>
+                    </h2>
+                    <strong>
+                        <%= fruit.price %>
+                    </strong>
+                    <strong>
+                        <%= fruit.color %>
+                    </strong>
+                </div>
+                <div class="details">
+                        <h2>
+                            <%= fruit.origin %>
+                        </h2>
+                        <strong>
+                            <%= fruit.quantity %>
+                        </strong>
+                        <strong>    
+                            <%= fruit.rating %>
+                        </strong>
+                </div>
+                <strong class="stock">InStock: <%= fruit.inStock%></strong>
+        </div>
+    </div>
+</body>
+</html>

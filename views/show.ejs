@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/show.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <% data.forEach((val)=> { %>
+            <div class="item">
+                <div class="details">
+                    <h2>
+                        <%= val.name %>
+                    </h2>
+                    <strong>
+                        <%= val.price %>
+                    </strong>
+                    <strong>
+                        <%= val.color %>
+                    </strong>
+                </div>
+                <div class="stock-wrapper">
+                    <strong class="stock">InStock: <%= val.inStock%></strong> <a href="/home/<%= val.id %>/edit"
+                        class="edit-btn">Edit</a>
+                </div>
+                <div class="btns">
+                    <button><a href="/home/form">Create</a></button>
+                    <form action="/home/<%= val.id %>?_method=DELETE" class="delete-form" method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <button><a href="/home/<%= val.id %>">Show more</a></button>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+</body>
+
+</html>
