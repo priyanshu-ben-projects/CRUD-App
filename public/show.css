@@ -27,11 +27,15 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .edit-btn {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: .6rem;
     border-radius: 5px;
     padding: 4px 15px;
     margin: 5px;
