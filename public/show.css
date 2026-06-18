@@ -7,13 +7,10 @@
     --primary: #B5E18B;
 }
 
-
-
-
 * {
     margin: 0;
     padding: 0;
-    font-family: Poppins;
+    font-family: Poppins,sans-serif;
     box-sizing: border-box;
 }
 
@@ -81,7 +78,7 @@ body {
 }
 
 .stock {
-    font-size: .6 rem;
+    font-size: .6rem;
     border-radius: 5px;
     align-self: flex-start;
     padding: 4px 15px;
@@ -90,30 +87,47 @@ body {
     background: var(--textBase);
 }
 
-   .stock-wrapper {
-        grid-template-columns: 1fr;
-                    }
+
+
 
 .btns {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    gap: 4px;
+ 
 }
 
-.btns a {
-    text-decoration: none;
-    color: var(--textBase);
+
+.btns .delete-form {
+    flex: 1;
+    margin: 0;
 }
 
-.btns button {
+.btns button,
+.btns .delete-form button {
+    width: 100%;
     font-size: .6rem;
     background: var(--primary);
     color: var(--textBase);
     border: none;
-    padding: 5px 0px;
     border-radius: 5px;
-    margin: 2px;
-    width: 100%;
     font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+
+}
+.btns a {
+    display: block;
+    padding: 5px 0px;
+    text-decoration: none;
+    color: var(--textBase);
+    width: 100%;
+}
+
+.btns .delete-form button {
+    padding: 5px 8px;
 }
 
 
