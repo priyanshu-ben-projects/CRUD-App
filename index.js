@@ -184,7 +184,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-    res.send("show.ejs");
+    res.render("show.ejs");
 });
 
 app.get("/home", (req, res) => {
